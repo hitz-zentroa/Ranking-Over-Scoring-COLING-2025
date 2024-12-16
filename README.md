@@ -79,10 +79,16 @@ python3 test_New_Argumentation.py --test PathToTheTestFile.jsonl
 Please ensure that you replace `PathToTheTestFile.jsonl` with the actual path to the test file you intend to evaluate. 
 
 ### Training a new evaluator
+If you want to train a new model with new arguments and test it against the test datasets we used in our study, execute the following command from the `src/Training` directory:
 
+```bash
+python3 train_New_Argumentation.py --train PathToTheTrainFile.jsonl --dev PathToTheDevFile.jsonl --test PathToTheTestFile.jsonl
+```
+As an example, you can use the datasets located in the `data/training` directory in the following way:
 
-
-
+```bash
+python3 train_New_Argumentation.py --train ../../data/training/en.train_casimedicos_Mixture-LLM-Args_0_Neutralized.jsonl --dev  ../../data/training/en.dev_casimedicos_Mixture-LLM-Args_0_Neutralized.jsonl --test ../../data/training/en.dev_casimedicos_Mixture-LLM-Args_0_Neutralized.jsonl
+```
 
 ## Citation
 
